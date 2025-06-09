@@ -14,20 +14,6 @@
         body, html { margin: 0; padding: 0; height: 100%; }
         #map { position: absolute; top: 0; bottom: 0; width: 100%; }
     </style>
-</head></head>
-    <meta charset="utf-8">
-    <title>CSV to Map Example</title>
-    <!-- Load MapLibre GL JS for the map -->
-    <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
-    <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
-    <!-- Load jQuery for easy AJAX requests -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
-    <!-- Load csv2geojson to convert CSV to GeoJSON -->
-    <script src="https://npmcdn.com/csv2geojson@latest/csv2geojson.js"></script>
-    <style>
-        body, html { margin: 0; padding: 0; height: 100%; }
-        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
-    </style>
 </head>
 <body>
     <!-- This div is where the map will appear -->
@@ -46,7 +32,7 @@
             $.ajax({
                 type: "GET",
                 //YOUR TURN: Replace with csv export link
-                url: 'replace this text with the link to your CSV file within the single quotes', // replace the text in single quotes with the link to your CSV file
+                url: 'https://docs.google.com/spreadsheets/d/1igBOzvWg-GpeFHgOwrUviAKkDRWgsoR36n45spbWDE8/gviz/tq?tqx=out:csv&sheet=ca_haunted_places', // replace the text in single quotes with the link to your CSV file
                 dataType: "text",
                 success: function (csvData) { makeGeoJSON(csvData); }
             });
